@@ -1,15 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
     background-color: white;
     color: blue;
     padding: 10px;
-    text-align: center;
-    border: 1px solid black; /* Adiciona uma linha preta ao redor do cabeçalho */
-    margin-bottom: 20px; /* Adiciona uma margem na parte inferior do cabeçalho */
+    text-align: left;
+    border: 1px solid black; 
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 .conversa {
@@ -45,22 +47,29 @@ header {
 
 footer {
     background-color: white;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
-    border-top: 1px solid black; /* Adiciona uma linha preta na parte superior do rodapé */
-    margin-top: 20px; /* Adiciona uma margem na parte superior do rodapé */
+    border-top: 1px solid black;
+    margin-top: 40px;
+     
 }
 
 textarea {
-    width: 70%; /* Ajusta a largura da caixa de texto conforme necessário */
-    padding: 5px;
-    margin-right: 10px; /* Adiciona um espaço à direita da caixa de texto */
-}
+    width: 90%; 
+    padding: auto;
+}   
 
 button {
-    background-color: blue;
-    color: white;
-    padding: 8px 15px;
-    border: none;
+    background-color: rgb(131, 124, 124);
+    color: blue;
+    padding: 9px 9px;
     cursor: pointer;
+    vertical-align: top ;
+}
+
+.conteudo {
+    max-width: 1000px   ; /* Defina a largura máxima desejada para o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    border: 2px solid #333; /* Cor e largura da borda desejadas */
+    padding: 20px; /* Espaçamento interno para o conteúdo */
 }
