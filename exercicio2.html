@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercicio2.css">
+    <title>Atendimento on-line</title>
+</head>
+<body>
+    <div class="conteudo"> 
+        <header>Atendimento on-line</header>
+        <div class="conversa">
+            <div class="mensagem atendente">
+                <div>Atendente</div>
+                Você vai querer como professor o Lucas ou o Gilberto?
+            </div>
+            <br><br>
+            <div class="mensagem cliente">
+                <div class="eu">Eu</div>
+                Lucas, Gilberto só serve de coordenador.
+            </div>
+            <br><br>
+            <br><br>
+            <div class="mensagem atendente">
+                <div>Atendente</div>
+                Certo, já está escolhido então!
+            </div>
+            <br><br>    
+            <div class="mensagem cliente">
+                <div class="eu">Eu</div>
+                Muito obrigado!
+            </div>
+        </div>
+        <br><br>
+        <br><br>
+        <footer>
+            <textarea id="mensagemInput" placeholder="Digite sua mensagem"></textarea>
+            <button id="enviarBtn">Enviar</button>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('enviarBtn').addEventListener('click', function() {
+    // resgatando a mensagem enviada
+    var mensagem = document.getElementById('mensagemInput').value;
+
+    // verifica se nao esta vazio
+    if (mensagem.trim() !== '') {
+        // Cria um novo elemento de mensagem que voce acabou de digitar
+        var novaMensagemCliente = document.createElement('div');
+        novaMensagemCliente.classList.add('mensagem', 'cliente');
+
+        var divEu = document.createElement('div');
+        divEu.classList.add('eu');
+        divEu.textContent = 'Eu';
+        novaMensagemCliente.appendChild(divEu);
+
+        var textoMensagem = document.createTextNode(mensagem);
+        novaMensagemCliente.appendChild(textoMensagem);
+
+        // Cria um elemento de quebra de mensagem para separar as mensagens
+        var separadorMensagem = document.createElement('div');
+        separadorMensagem.classList.add('separador');
+        document.querySelector('.conversa').appendChild(separadorMensagem);
+
+        // Adiciona a nova mensagem do cliente ao final da conversa
+        document.querySelector('.conversa').appendChild(novaMensagemCliente);
+
+        // Limpa o campo de texto da mensagem
+        document.getElementById('mensagemInput').value = '';
+        }
+    });
+
+    </script>
+</body>
+</html>
