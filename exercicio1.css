@@ -15,7 +15,7 @@ header {
 }
 
 .conversa {
-    width: 60%;
+    width: 80%;
     margin: auto;
 }
 
@@ -60,16 +60,20 @@ textarea {
 }   
 
 button {
-    background-color: rgb(131, 124, 124);
-    color: blue;
+    background-color: rgb(0, 255, 76);
+    color: rgb(0, 0, 0);
     padding: 9px 9px;
     cursor: pointer;
     vertical-align: top ;
 }
 
 .conteudo {
-    max-width: 1000px   ; /* Defina a largura máxima desejada para o conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    border: 2px solid #333; /* Cor e largura da borda desejadas */
-    padding: 20px; /* Espaçamento interno para o conteúdo */
+    max-width: 1000px   ; 
+    margin: 0 auto; 
+    border: 2px solid #333; 
+    padding: 20px; 
+}
+
+.separador {
+    clear: both;
 }
