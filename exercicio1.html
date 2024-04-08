@@ -46,7 +46,7 @@
 
     // verifica se nao esta vazio
     if (mensagem.trim() !== '') {
-        // Cria um novo elemento de mensagem que voce acabou de digitar
+        // criando a nova caixa de mensagem que voce acabou de digitar
         var novaMensagemCliente = document.createElement('div');
         novaMensagemCliente.classList.add('mensagem', 'cliente');
 
@@ -58,15 +58,14 @@
         var textoMensagem = document.createTextNode(mensagem);
         novaMensagemCliente.appendChild(textoMensagem);
 
-        // Cria um elemento de quebra de mensagem para separar as mensagens
+        // cria um elemento de quebra de mensagem para separar as mensagens (sem isso ele adiciona tudo um do lado do outro)
         var separadorMensagem = document.createElement('div');
         separadorMensagem.classList.add('separador');
         document.querySelector('.conversa').appendChild(separadorMensagem);
 
-        // Adiciona a nova mensagem do cliente ao final da conversa
         document.querySelector('.conversa').appendChild(novaMensagemCliente);
 
-        // Limpa o campo de texto da mensagem
+        // limpa o campo de mensagem
         document.getElementById('mensagemInput').value = '';
         }
     });
